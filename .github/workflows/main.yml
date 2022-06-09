@@ -40,13 +40,13 @@ jobs:
  
         
       - name: Build React app
-        run: npm build
+        run: sudo yarn run build
       
       - name: Install Surge
-        run: sudo npm install --global surge
+        run: npm install --global surge
       
       - name: Deploy to surge
-        run: surge ./https://github.com/ihsan-buneri/react_bootcamp_class_02 ihsan_class_02_react_bootcamp.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        run: surge ./build ihsan_class_02_react_bootcamp.surge.sh --token ${{secrets.SURGE_TOKEN}}
       
       
           
