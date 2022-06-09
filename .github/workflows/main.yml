@@ -30,11 +30,17 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
           node-version: 12
-          
-      - name: Install Yarn
-        uses: Borales/actions-yarn@v2.0.0
-        with: 
-          cmd: install
+      - name: GitHub Action for Yarn
+  # You may pin to the exact commit or the version.
+  # uses: Borales/actions-yarn@d8ce577a6f5d99a459fc7fdf2a86844617e353e4
+        uses: Borales/actions-yarn@v3.0.0
+        with:
+    # Yarn command
+               cmd: 
+    # NPM_AUTH_TOKEN
+             auth-token: # optional
+    # NPM_REGISTRY_URL
+             registry-url: # optional
         
       - name: Build React app
         run: yarn build
