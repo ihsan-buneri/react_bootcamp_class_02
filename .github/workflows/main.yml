@@ -46,7 +46,7 @@ jobs:
         run: sudo npm install --global surge
       
       - name: Deploy to surge
-        run: surge ./build ihsan_class_02_react_bootcamp.surge.sh ${{secrets.SURGE_TOKEN}}
+        run: surge ./build ihsan_class_02_react_bootcamp.surge.sh --token ${{secrets.SURGE_TOKEN}}
       
       
           
